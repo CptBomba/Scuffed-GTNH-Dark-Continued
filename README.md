@@ -1,4 +1,9 @@
 # Scuffed-GTNH-Dark (Continued)
+
+> Hey! This repo is no longer updated.  
+> The **new version** is now here:  
+> https://github.com/Kuliiuu/Dark-GTNH-Reimagined
+
 **GT New Horizons: Dark theme for 2.8.0**
 
 > 🎨 This is a **fork** of the original [Scuffed-GTNH-Dark by Flanisch](https://github.com/Flanisch/Scuffed-GTNH-Dark), continued in the spirit of the original.  
