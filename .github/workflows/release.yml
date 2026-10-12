@@ -1,14 +1,12 @@
 name: Release
 
+# Publishes a GitHub release whose tag is the content of the VERSION file.
+# Runs when VERSION changes on a push, or manually from the Actions tab.
 on:
   push:
-    tags:
-      - "v*"
+    paths:
+      - VERSION
   workflow_dispatch:
-    inputs:
-      tag:
-        description: "Tag to release (e.g. v2.9.0-rc2)"
-        required: true
 
 permissions:
   contents: write
@@ -18,20 +16,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      - name: Read version
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="$(tr -d '[:space:]' < VERSION)"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+          if gh release view "$TAG" --repo "${{ github.repository }}" > /dev/null 2>&1; then
+            echo "Release $TAG already exists, nothing to do."
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Build resource pack zip
+        if: steps.version.outputs.exists != 'true'
         run: |
-          TAG="${{ github.event.inputs.tag || github.ref_name }}"
-          echo "TAG=$TAG" >> "$GITHUB_ENV"
           zip -q -r -X "ScuffedDarkGTNH-${TAG}.zip" pack.mcmeta pack.png LICENSE.md README.md assets
           unzip -l "ScuffedDarkGTNH-${TAG}.zip" | tail -1
 
       - name: Publish release
+        if: steps.version.outputs.exists != 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG }}
+          target_commitish: ${{ github.sha }}
           name: Scuffed Dark GTNH ${{ env.TAG }}
           files: ScuffedDarkGTNH-${{ env.TAG }}.zip
           prerelease: ${{ contains(env.TAG, 'rc') }}
