@@ -1,0 +1,15 @@
+container.cargoloader.name=§fCargo Loader
+container.cargounloader.name=§fCargo Unloader
+container.fuelloader.name=§fFuel Loader
+container.oxygencollector.name=§fOxygen Collector
+container.oxygencompressor.name=§fOxygen Compressor
+container.oxygendistributor.name=§fOxygen Distributor
+container.oxygensealer.name=§fOxygen Sealer
+container.parachest.name=§fPara-chest
+container.refinery.name=§fRefinery
+container.treasurechest.name=§fTreasure Chest
+container.lander.name=§fSpace Lander
+container.spaceship.name=§fTier 1 Rocket
+container.solarbasic.name=§fBasic Solar Panel
+container.solaradvanced.name=§fAdvanced Solar Panel
+container.oxygendecompressor.name=§fOxygen Decompressor

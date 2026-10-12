@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release (e.g. v2.9.0-rc2)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      - name: Build resource pack zip
+        run: |
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+          zip -q -r -X "ScuffedDarkGTNH-${TAG}.zip" pack.mcmeta pack.png LICENSE.md README.md assets
+          unzip -l "ScuffedDarkGTNH-${TAG}.zip" | tail -1
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          name: Scuffed Dark GTNH ${{ env.TAG }}
+          files: ScuffedDarkGTNH-${{ env.TAG }}.zip
+          prerelease: ${{ contains(env.TAG, 'rc') }}
+          body: |
+            Dark UI resource pack for **GT New Horizons 2.9** (tested on 2.9.0-RC-2).
+
+            **Not my own work:** this is the pack originally made by **Flanisch** and continued by **Marneyy_**, only updated and edited for 2.9 by **CapitaoBomba**. See the README for the full credits and the list of changes.
+
+            Install: put the zip in `resourcepacks` and keep it **above** other GUI packs (Faithful, Unity...).
+
+            License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — keep the credits, non-commercial, share alike.

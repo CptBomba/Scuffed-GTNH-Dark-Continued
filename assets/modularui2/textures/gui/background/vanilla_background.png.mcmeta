@@ -21,13 +21,13 @@
       "Machine Metal": "FFFFFF"
     },
     "textColor": {
-      "title": "DDDDDD",
+      "title": "FFFFFF",
       "title_white": "FFFFFF",
-      "text_gray": "ADADAD",
+      "text_gray": "D8D8D8",
       "text_red": "FF6464",
       "text_white": "FFFFFF",
-      "nei": "ADADAD",
-      "nei_overlay": "ADADAD"
+      "nei": "D8D8D8",
+      "nei_overlay": "D8D8D8"
     }
   }
 }
