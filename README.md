@@ -43,6 +43,8 @@ Changes made by CapitaoBomba on top of the 2.8 version by Marneyy_:
 - **Baubles Expanded 2.2**, **BogoSorter**: dark unused bauble slots and sort buttons.
 - **Cleanup**: removed outdated full copies of the Blood Magic and Adventure Backpack language files, which were overriding the 2.9 texts.
 - New pack icon (same design, with a 2.9 badge) and description.
+- **2.9 colour system (rc2.1)**: AE2, GregTech, NEI, Tinkers, EnderIO and others now read GUI colours from GTNHLib `color.resource.*` keys; the old lang colour keys are ignored. Added dark-theme overrides in `assets/gtnhlib/lang/en_US.lang` (fixes unreadable AE2 crafting status text).
+- **AE2 2.9 (rc2.1)**: new icons in `states.png` (the pink squares in the crafting CPU list), 14 new AE2 GUIs, new network status bar and CPU selector line; new NEI and NEI Custom Diagram sprites.
 
 ---
 

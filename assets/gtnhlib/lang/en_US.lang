@@ -1,0 +1,92 @@
+# Scuffed Dark - colour overrides for GTNHLib ColorResource (GTNH 2.9+)
+# Mods moved their GUI colours from their own lang keys to color.resource.<mod>.<name>.
+# RGB = RRGGBB, ARGB = AARRGGBB.
+
+# Applied Energistics 2
+color.resource.ae2.guiTextColorGray=FFFFFF
+color.resource.ae2.guiTextColorBlack=FFFFFF
+color.resource.ae2.searchboxText=079D48
+color.resource.ae2.craftingStatusCPUName=FFFFFF
+color.resource.ae2.craftingStatusCPUStorage=FFFFFF
+color.resource.ae2.craftingStatusCPUAmount=FFFFFF
+color.resource.ae2.craftConfirmPercent25=4D8DFF
+color.resource.ae2.craftConfirmPercent50=3FCB45
+color.resource.ae2.craftConfirmPercent100=E04848
+color.resource.ae2.neiGrindstoneRecipeChance=FFFFFF
+color.resource.ae2.neiGrindstoneNoSecondOutput=FFFFFF
+color.resource.ae2.neiCellView=FFFFFF
+color.resource.ae2.contextMenuText=E0E0E0
+color.resource.ae2.contextMenuBackground=FF1B2328
+color.resource.ae2.contextMenuBackgroundHover=FF2C3A42
+color.resource.ae2.contextMenuBorder=FF4A5A64
+color.resource.ae2.craftingTreeTask=A0A0A0
+color.resource.ae2.itemSlotOverlayUnpowered=1FE0042E
+color.resource.ae2.itemSlotOverlayInvalid=1FE0042E
+color.resource.ae2.craftConfirmMissingItem=1FE0042E
+
+# AE2 Fluid Crafting
+color.resource.ae2fc.guiTextColorGray=FFFFFF
+color.resource.ae2fc.itemSlotOverlayUnpowered=1FE0042E
+
+# Better Questing (NEI)
+color.resource.bq_standard.neiQuestNameColor=FFFFFF
+color.resource.bq_standard.neiQuestNameHoveredColor=FFAA00
+
+# BlockRenderer6343 (NEI)
+color.resource.blockrenderer6343.neiBackground=182025
+
+# Bee Better At Bees (NEI)
+color.resource.beebetteratbees.neiLineBlack=E0E0E0
+color.resource.beebetteratbees.neiLineLabelBlack=E0E0E0
+color.resource.beebetteratbees.neiLineRed=FF5555
+color.resource.beebetteratbees.neiLineLabelRed=FF5555
+
+# Botania (NEI)
+color.resource.botania.neiHandlerBotaniaLexicaTitle=FFFFFF
+color.resource.botania.neiHandlerBotaniaLexicaKnowledge=D8D8D8
+color.resource.botania.neiHandlerBotaniaLexicaTagline=D8D8D8
+color.resource.botania.neiHandlerBotaniaLexicaExtraInfo=D8D8D8
+color.resource.botania.neiHandlerBotaniaLexicaExtraInfoDesc=D8D8D8
+
+# EnderIO
+color.resource.enderio.priorityString=FFFFFF
+color.resource.enderio.suctionString=FFFFFF
+color.resource.enderio.neiMultiplierString=B8B8B8
+color.resource.enderio.neiEnchantString=B8B8B8
+color.resource.enderio.neiEnergyString=B8B8B8
+
+# IFU
+color.resource.ifu.title=FFFFFF
+color.resource.ifu.displayText=E0E0E0
+color.resource.ifu.blocklistWarning=E0E0E0
+color.resource.ifu.searchAvailable=E0E0E0
+color.resource.ifu.searchUnavailable=FF5555
+
+# NotEnoughItems
+color.resource.nei.textGray=D8D8D8
+color.resource.nei.textLightGray=A8A8A8
+color.resource.nei.buttonLabelDisabled=A04848
+
+# OpenComputers (NEI)
+color.resource.opencomputers.neiDocTitle=FFFFFF
+color.resource.opencomputers.neiDocText=D0D0D0
+
+# Tinkers' Construct
+color.resource.tinker.inventoryTitle=FFFFFF
+color.resource.tinker.materialName=FFFFFF
+color.resource.tinker.materialDurability=E0E0E0
+color.resource.tinker.materialHandleModifier1=E0E0E0
+color.resource.tinker.materialHandleModifier2=E0E0E0
+color.resource.tinker.materialMiningSpeed=E0E0E0
+color.resource.tinker.materialHarvestLevel=E0E0E0
+color.resource.tinker.materialAttack1=E0E0E0
+color.resource.tinker.materialAttack2=E0E0E0
+color.resource.tinker.materialReinforced=E0E0E0
+color.resource.tinker.materialStonebound=E0E0E0
+color.resource.tinker.materialAbility=E0E0E0
+color.resource.tinker.materialBow=E0E0E0
+color.resource.tinker.materialBowDrawSpeed=E0E0E0
+color.resource.tinker.materialBowFlightSpeedMax=E0E0E0
+color.resource.tinker.materialArrowMass=E0E0E0
+color.resource.tinker.materialArrowBreakChance=E0E0E0
+color.resource.tinker.neiTemperature=B8B8B8
