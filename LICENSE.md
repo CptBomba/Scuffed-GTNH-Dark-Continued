@@ -1,6 +1,8 @@
 Scuffed-GTNH-Dark (Continued) by Kuliiuu (Marneyy_) is a fork of "Scuffed-GTNH-Dark" by Flanisch (a.k.a. Albi), used under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-This project and all modifications made by Marneyy_ are also licensed under the same license:  
+This edition, updated for GT New Horizons 2.9 by CapitaoBomba (GitHub: CptBomba), is a fork of Scuffed-GTNH-Dark (Continued) and is used under the same license. CapitaoBomba is not the original author of this pack; the changes made for 2.9 are listed in the README.
+
+This project and all modifications made by Marneyy_ and by CapitaoBomba are also licensed under the same license:  
 **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**
 
 See below for the full license text.

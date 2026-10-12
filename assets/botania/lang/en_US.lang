@@ -31,7 +31,6 @@ botania.knowledge.alfheim=&aElven&7 Knowledge
 botania.knowledge.relic=&5Relic&7 Knowledge
 
 # CHALLENGE LEVELS
-botania.challengelevel.lunatic=GREG
 
 # GUI TEXT
 botania.gui.lexicon.header=§fLexica Botania, %s Edition Table of Contents

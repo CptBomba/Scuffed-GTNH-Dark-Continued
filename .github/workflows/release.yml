@@ -1,0 +1,54 @@
+name: Release
+
+# Publishes a GitHub release whose tag is the content of the VERSION file.
+# Runs when VERSION changes on a push, or manually from the Actions tab.
+on:
+  push:
+    paths:
+      - VERSION
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="$(tr -d '[:space:]' < VERSION)"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+          if gh release view "$TAG" --repo "${{ github.repository }}" > /dev/null 2>&1; then
+            echo "Release $TAG already exists, nothing to do."
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build resource pack zip
+        if: steps.version.outputs.exists != 'true'
+        run: |
+          zip -q -r -X "ScuffedDarkGTNH-${TAG}.zip" pack.mcmeta pack.png LICENSE.md README.md assets
+          unzip -l "ScuffedDarkGTNH-${TAG}.zip" | tail -1
+
+      - name: Publish release
+        if: steps.version.outputs.exists != 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          target_commitish: ${{ github.sha }}
+          name: Scuffed Dark GTNH ${{ env.TAG }}
+          files: ScuffedDarkGTNH-${{ env.TAG }}.zip
+          prerelease: ${{ contains(env.TAG, 'rc') }}
+          body: |
+            Dark UI resource pack for **GT New Horizons 2.9** (tested on 2.9.0-RC-2).
+
+            **Not my own work:** this is the pack originally made by **Flanisch** and continued by **Marneyy_**, only updated and edited for 2.9 by **CapitaoBomba**. See the README for the full credits and the list of changes.
+
+            Install: put the zip in `resourcepacks` and keep it **above** other GUI packs (Faithful, Unity...).
+
+            License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — keep the credits, non-commercial, share alike.
