@@ -4,7 +4,7 @@
 > The **new version** is now here:  
 > https://github.com/Kuliiuu/Dark-GTNH-Reimagined
 
-**GT New Horizons: Dark theme for 2.8.0**
+**GT New Horizons: Dark theme for 2.8.0 / 2.9.0 (RC-2)**
 
 🎨 This is a **fork** of the original [Scuffed-GTNH-Dark by Flanisch](https://github.com/Flanisch/Scuffed-GTNH-Dark), continued in the spirit of the original.  
 💬 For feedback or texture requests, feel free to contact me on Discord: **@marneyy_**
@@ -26,7 +26,7 @@ This UI Resource Pack is developed with compatibility in mind for Unity and ZedT
 - [Zedtech-New-Horizons](https://github.com/FyreofShadow/zedtech-new-horizons)  
 - [Unity IC2-Backport](https://www.curseforge.com/minecraft/texture-packs/unity-ic2-1-7-10-backport/files/2377036)  
 
-📦 **Load Order in Minecraft:**
+📦 **Load Order in Minecraft** (this pack must stay *above* any other texture pack, e.g. Faithful, or their GUI textures will win):
 1. Scuffed-GTNH-Dark-Continued  
 2. Zedtech-New-Horizons  
 3. Unity IC2-Backport  
