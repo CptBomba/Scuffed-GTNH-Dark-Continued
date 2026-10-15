@@ -46,6 +46,7 @@ Changes made by CapitaoBomba on top of the 2.8 version by Marneyy_:
 - **2.9 colour system (rc2.1)**: AE2, GregTech, NEI, Tinkers, EnderIO and others now read GUI colours from GTNHLib `color.resource.*` keys; the old lang colour keys are ignored. Added dark-theme overrides in `assets/gtnhlib/lang/en_US.lang` (fixes unreadable AE2 crafting status text).
 - **AE2 2.9 (rc2.1)**: new icons in `states.png` (the pink squares in the crafting CPU list), 14 new AE2 GUIs, new network status bar and CPU selector line; new NEI and NEI Custom Diagram sprites.
 - **NEI recipe overlay (rc2.2)**: NotEnoughEnergistics draws its own blue ✓/✗ "have/missing" icons on recipe slots when an AE2 terminal is open; they were missing from the pack (now added, slightly brighter for the dark theme). Also new AE2 Fluid Craft state icons and StructureLib channel widgets.
+- **AE2 config slots (rc2.3)**: AE2 draws its config slots by cutting them out of the GUI texture. Added the missing slot sources so Import/Export Bus slots show, locked Storage Bus / Formation Plane / Cell Workbench rows now look disabled, and ME Interface fuzzy slots get their (now visible) corner marker.
 
 ---
 
